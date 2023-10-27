@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Utkarsh K | Streak" decoding="async" loading="lazy" target="_blank" src="[https://github-readme-streak-stats-five-gules.vercel.app?user=kutkarshh&theme=radical](https://res.cloudinary.com/kutkarsh/image/upload/v1698424057/jwyeqgzrdphu6kr6ux7n.png)" />
+  <img alt="Utkarsh K | Promptizer" decoding="async" loading="lazy" target="_blank" src="(https://res.cloudinary.com/kutkarsh/image/upload/v1698424057/jwyeqgzrdphu6kr6ux7n.png)" />
 </p>
 
 Promptizer is a Next.js project that is both a portfolio website and a collection of commonly used AI tools and third-party products. It is designed to help developers in their daily work by providing them with a single place to access a variety of useful resources.
