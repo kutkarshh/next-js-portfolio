@@ -1,4 +1,4 @@
-<p align="left">
+<p align="centre">
   <img alt="Utkarsh K | Promptizer" decoding="async" loading="lazy" style="height: 100px;" target="_blank" src="https://res.cloudinary.com/kutkarsh/image/upload/v1698424057/jwyeqgzrdphu6kr6ux7n.png" />
 </p>
 
