@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Promptizer is a Next.js project that is both a portfolio website and a collection of commonly used AI tools and third-party products. It is designed to help developers in their daily work by providing them with a single place to access a variety of useful resources.
 
-## Getting Started
+The AI tools included in Promptizer include:
 
-First, run the development server:
+DALL-E 2: A text-to-image diffusion model that can generate realistic images from text descriptions.
+GPT-3: A large language model that can generate text, translate languages, write different kinds of creative content, and answer your questions in an informative way.
+Imagen: A text-to-image diffusion model that can generate photorealistic images from text descriptions.
+In addition to AI tools, Promptizer also includes a variety of third-party products, such as:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tailwind CSS: A utility-first CSS framework that helps you to build responsive and beautiful websites quickly and easily.
+React Hook Form: A library that makes it easy to build forms in React.
+Axios: A popular HTTP client library for JavaScript.
+Promptizer is an open-source project, which means that anyone can contribute to its development or use it for their own projects. It is also free to use, so there is no barrier to entry.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Here are some of the ways that Promptizer can be used by developers:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To generate creative ideas: Promptizer can be used to generate creative ideas for things like blog posts, marketing campaigns, and product development.
+To prototype new ideas: Promptizer can be used to prototype new ideas quickly and easily. For example, you can use DALL-E 2 to generate mockups of new product designs or GPT-3 to generate sample marketing copy.
+To learn new skills: Promptizer can be used to learn new skills, such as how to use AI tools or how to build web applications with Next.js.
+To build a portfolio website: Promptizer can be used to build a portfolio website to showcase your work and skills.
+If you are a developer, I encourage you to check out Promptizer. It is a valuable resource that can help you in all aspects of your work.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+It's a project in development. Thanks for reading till the end!! 😄
