@@ -12,6 +12,12 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://widget.Cloudinary.com/v2.0/global/all.js"
+          type="text/javascript"
+        ></script>
+      </head>
       <body>
         <Provider>
           <div className="main">

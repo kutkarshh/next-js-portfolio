@@ -37,7 +37,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="nav flex-between w-full mb-16 pt-3">
+    <nav className="nav flex-between w-full mb-10 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/images/logoai.svg"
@@ -59,9 +59,7 @@ const Nav = () => {
             <Link href="/prompts" className="black_btn">
               Prompts
             </Link>
-            <Link href="/create-prompt" className="black_btn">
-              Create Post
-            </Link>
+
             <div className="relative user_img">
               <Image
                 id="profile_img"
@@ -74,29 +72,38 @@ const Nav = () => {
               />
 
               <div
-                className={`absolute top-12 right-2 z-30 w-[150px] h-auto gap-2 flex flex-col p-2 bg-gray-100/20 rounded-md ${transClass}`}
+                className={`absolute top-12 right-2 z-30 w-[180px] h-auto gap-2 flex flex-col p-2 bg-gray-100/20 rounded-md ${transClass}`}
                 onMouseLeave={isDropdownOpen}
               >
                 {pathName !== "/profile" ? (
                   <div>
-                    <Link href="/profile">
-                      <button type="button" className="black_btn">
-                        My Profile
-                      </button>
+                    <Link href="/profile" className="black_btn">
+                      My Profile
                     </Link>
                   </div>
                 ) : (
-                  <div>
-                    <button type="button" className="white_btn " disabled>
-                      My Profile
-                    </button>
-                  </div>
+                  <div className="white_btn">My Profile</div>
                 )}
+                <div>
+                  <Link href="/create-prompt" className="black_btn">
+                    Create Prompt
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/create-post" className="black_btn">
+                    Create Post
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/create-post" className="black_btn">
+                    Create Post
+                  </Link>
+                </div>
                 <div>
                   <button
                     type="button"
                     onClick={userLogOut}
-                    className="outline_btn"
+                    className="black_btn"
                   >
                     Sign Out
                   </button>
@@ -142,12 +149,25 @@ const Nav = () => {
                 >
                   My Profile
                 </Link>
+                <Link href="/posts" className="dropdown_link">
+                  Posts
+                </Link>
+                <Link href="/prompts" className="dropdown_link">
+                  Prompts
+                </Link>
                 <Link
                   href="/create-prompt"
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Create Prompt
+                </Link>
+                <Link
+                  href="/create-post"
+                  className="dropdown_link"
+                  onClick={() => setToggleDropdown(false)}
+                >
+                  Create Post
                 </Link>
                 <button
                   type="button"

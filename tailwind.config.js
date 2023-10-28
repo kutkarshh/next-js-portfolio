@@ -4,6 +4,8 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js",
   ],
   theme: {
     extend: {
@@ -17,4 +19,8 @@ module.exports = {
     },
   },
   plugins: [],
+  reactStrictMode: true,
+  images: {
+    domain: ["res.cloudinary.com"],
+  },
 };

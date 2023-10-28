@@ -1,19 +1,19 @@
 "use client";
 
-import PromptCard from "./PromptCard";
+import PostCard from "./PostCard";
 
 import { useEffect, useState } from "react";
 
 const Posts = () => {
   const [searchText, setSearchText] = useState("");
-  const [searchTimeout, setSearchTimeout] = useState(null);
+  //   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState([]);
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/prompt");
+    const response = await fetch("/api/post");
     const data = await response.json();
-
+    console.log(data);
     setPosts(data);
   };
 
@@ -21,71 +21,61 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
-  const PromptCardList = ({ data, handleTagClick }) => {
+  const PostCardList = ({ data, handlePostClick }) => {
     return (
-      <div className="mt-16 prompt_layout">
+      <div className="mt-16 flex flex-col gap-5">
         {data.map((post) => (
-          <PromptCard
+          <PostCard
             key={post._id}
             post={post}
-            handleTagClick={handleTagClick}
+            handlePostClick={handlePostClick}
           />
         ))}
       </div>
     );
   };
 
-  const filterPrompts = (searchText) => {
-    const regex = new RegExp(searchText, "i");
+  //   const filterPrompts = (searchText) => {
+  //     const regex = new RegExp(searchText, "i");
 
-    return posts.filter(
-      (item) =>
-        regex.test(item.creator.username) ||
-        regex.test(item.tag) ||
-        regex.test(item.prompt)
-    );
-  };
+  //     return posts.filter(
+  //       (item) =>
+  //         regex.test(item.creator.username) ||
+  //         regex.test(item.tag) ||
+  //         regex.test(item.prompt)
+  //     );
+  //   };
 
-  const handleSearchChange = (e) => {
-    clearTimeout(searchTimeout);
-    setSearchText(e.target.value);
+  //   const handleSearchChange = (e) => {
+  //     clearTimeout(searchTimeout);
+  //     setSearchText(e.target.value);
 
-    //debounce method
-    setSearchTimeout(
-      setTimeout(() => {
-        const searchResult = filterPrompts(e.target.value);
-        setSearchedResults(searchResult);
-      }, 500)
-    );
-  };
+  //     //debounce method
+  //     setSearchTimeout(
+  //       setTimeout(() => {
+  //         const searchResult = filterPrompts(e.target.value);
+  //         setSearchedResults(searchResult);
+  //       }, 500)
+  //     );
+  //   };
 
-  const handleTagClick = (tagName) => {
-    setSearchText(tagName);
-    const searchResult = filterPrompts(tagName);
-    setSearchedResults(searchResult);
+  const handlePostClick = (tagName) => {
+    // setSearchText(tagName);
+    // const searchResult = filterPrompts(tagName);
+    // setSearchedResults(searchResult);
+    console.log("Post clicked", newDate);
   };
 
   return (
-    <section className="feed">
-      <form className="relative w-full flex-center">
-        <input
-          type="text"
-          placeholder="Search for a Tag or a Username..."
-          value={searchText}
-          onChange={handleSearchChange}
-          required
-          className="search_input peer"
-        />
-      </form>
-
-      {/* All Prompts */}
+    <section className="post_feed">
+      {/* All Posts */}
       {searchText ? (
-        <PromptCardList
+        <PostCardList
           data={searchedResults}
-          handleTagClick={handleTagClick}
+          handlePostClick={handlePostClick}
         />
       ) : (
-        <PromptCardList data={posts} handleTagClick={handleTagClick} />
+        <PostCardList data={posts} handlePostClick={handlePostClick} />
       )}
     </section>
   );

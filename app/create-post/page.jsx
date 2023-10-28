@@ -3,33 +3,36 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import Form from "../../components/Form";
+import PostForm from "../../components/PostForm";
 
-const CreatePrompt = () => {
+const CreatePost = () => {
   const router = useRouter();
   const { data: session } = useSession();
 
+  // const [imagePublicId, setImagePublicId] = useState("");
+
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
-    prompt: "",
-    tag: "",
+    title: "",
+    desc: "",
+    date: "",
+    image: "",
   });
 
-  const createPrompt = async (e) => {
+  const createPost = async (e) => {
     e.preventDefault();
     setSubmitting(true);
 
+    console.log(post);
     try {
-      if (!session.user) {
-        console.log("Need Login before submitting");
-        return setSubmitting(false);
-      }
-      const response = await fetch("/api/prompt/new", {
+      const response = await fetch("/api/post/new", {
         method: "POST",
         body: JSON.stringify({
-          prompt: post.prompt,
           userId: session?.user.id,
-          tag: post.tag,
+          title: post.title,
+          desc: post.desc,
+          date: post.date,
+          image: post.image,
         }),
       });
 
@@ -44,14 +47,14 @@ const CreatePrompt = () => {
   };
 
   return (
-    <Form
+    <PostForm
       type="Create"
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={createPrompt}
+      handleSubmit={createPost}
     />
   );
 };
 
-export default CreatePrompt;
+export default CreatePost;
