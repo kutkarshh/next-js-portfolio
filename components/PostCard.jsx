@@ -7,7 +7,12 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
 import moment from "moment";
-const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
+const PostCard = ({
+  post,
+  handlePostClick,
+  handlePostEdit,
+  handlePostDelete,
+}) => {
   const [copied, setCopied] = useState("");
 
   const { data: session } = useSession();
@@ -20,7 +25,6 @@ const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
   const handleProfileClick = () => {
     if (post.creator._id === session?.user.id) return router.push("/profile");
     router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
-    console.log(session);
   };
 
   // const handleCopy = () => {
@@ -46,8 +50,9 @@ const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
         <Image
           src={post.image}
           alt="post_image"
-          width="auto"
-          height={400}
+          // width="full"
+          // height="200"
+          style={{ width: "full", height: 350 }}
           className="rounded-sm object-contain cursor-pointer"
         />
       </div>
@@ -91,13 +96,13 @@ const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
         <div className="mt-5 mb-2 flex-center gap-4 border border-gray-100 py-3 bg-white/50 rounded-md ">
           <p
             className="font-inter text-sm green_gradient cursor-pointer hover:text-black"
-            onClick={handleEdit}
+            onClick={handlePostEdit}
           >
             Edit
           </p>
           <p
             className="font-inter text-sm orange_gradient cursor-pointer hover:text-black"
-            onClick={handleDelete}
+            onClick={handlePostDelete}
           >
             Delete
           </p>

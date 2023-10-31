@@ -23,7 +23,6 @@ const CreatePost = () => {
     e.preventDefault();
     setSubmitting(true);
 
-    console.log(post);
     try {
       const response = await fetch("/api/post/new", {
         method: "POST",

@@ -1,18 +1,16 @@
 import { connectToDB } from "../../../../../utils/database";
-import Prompt from "../../../../../models/prompt";
+import Post from "../../../../../models/posts";
 
 export const GET = async (request, { params }) => {
   try {
     await connectToDB();
 
-    const prompts = await Prompt.find({ creator: params.id }).populate(
-      "creator"
-    );
-    return new Response(JSON.stringify(prompts), {
+    const posts = await Post.find({ creator: params.id }).populate("creator");
+    return new Response(JSON.stringify(posts), {
       status: 200,
     });
   } catch (error) {
-    return new Response("Failed to fetch all prompts", {
+    return new Response("Failed to fetch all posts", {
       status: 500,
     });
   }
