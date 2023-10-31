@@ -8,7 +8,7 @@
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
 .nav {
-  @apply rounded-b-xl border-b border-gray-600 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0)] backdrop-blur p-5;
+  @apply rounded-b-xl border-x border-b border-gray-600 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0)] backdrop-blur p-5;
 }
 
 .main {
@@ -18,8 +18,13 @@
   display: flex;
   justify-content: center;
   padding: 120px 24px 160px 24px;
-  background-image: url("/assets/images/dragon-scales_blue.svg");
-  pointer-events: none;
+  /* background-image: url("/assets/images/dragon-scales.svg"); */  
+  background-image: url("/assets/images/theme.jpg");
+  background-color: rgba(0, 0, 0, 0.185);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none; 
 }
 
 .main:before {
@@ -90,13 +95,21 @@
 .white_btn {
   @apply rounded-full border border-black  py-1.5 px-5  transition-all bg-white text-black text-center text-sm font-inter flex items-center justify-center;
 }
+.green_btn {
+  @apply rounded-full border border-green-700  py-1.5 px-5  transition-all bg-green-700 text-white text-center text-sm font-inter flex items-center justify-center;
+}
 
 .outline_btn {
   @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
 }
 
 .head_text {
-  @apply text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+  @apply text-5xl font-extrabold leading-[1.15] text-white sm:text-6xl;
+}
+
+/*Mobile View*/
+.headMob_text {
+  @apply text-3xl font-extrabold leading-[1.15] text-black;
 }
 
 .desc_text {
@@ -120,7 +133,7 @@
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-900 sm:text-xl max-w-2xl;
+  @apply mt-5 text-2xl text-gray-900 sm:text-xl max-w-2xl;
 }
 
 .search_input {
@@ -133,6 +146,10 @@
 
 .glassmorphism {
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+.lightglass {
+  @apply rounded-xl bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur-none p-5;
 }
 
 .prompt_layout {

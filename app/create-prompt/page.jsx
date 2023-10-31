@@ -34,6 +34,9 @@ const CreatePrompt = () => {
       });
 
       if (response.ok) {
+        setTimeout(() => {
+          confirm("Are you sure you want to delete this Post?");
+        }, 5000);
         router.push("/");
       }
     } catch (error) {

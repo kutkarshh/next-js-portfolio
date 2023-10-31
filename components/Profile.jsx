@@ -12,9 +12,9 @@ const Profile = ({
   handlePostDelete,
 }) => {
   return (
-    <section className="w-full">
+    <section className="w-full glassmorphism mb-10">
       <h1 className="head_text text_left">
-        <span className="blue_gradient">{name} Profile</span>
+        <span className="text-black">{name} Profile</span>
       </h1>
       <p className="desc text-left">{desc}</p>
       <div className="mt-5">

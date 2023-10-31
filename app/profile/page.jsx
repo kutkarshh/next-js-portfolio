@@ -3,7 +3,7 @@
 import Profile from "../../components/Profile.jsx";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const MyProfile = () => {
   const router = useRouter();
@@ -29,7 +29,6 @@ const MyProfile = () => {
       fetchPosts();
     }
   }, []);
-
 
   const handleEdit = (prompt) => {
     router.push(`/update-prompt?id=${prompt._id}`);

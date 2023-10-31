@@ -32,6 +32,7 @@ const Nav = () => {
   const userLogOut = () => {
     setTimeout(() => {
       router.push("/");
+      alert("Logging out!!")
       signOut();
     }, 2000);
   };
@@ -53,10 +54,20 @@ const Nav = () => {
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
-            <Link href="/posts" className="black_btn">
+            <Link
+              href="/posts"
+              className={`${pathName == "/posts" ? "white_btn" : "black_btn"} ${
+                pathName == "/posts" ? "active" : ""
+              }`}
+            >
               Posts
             </Link>
-            <Link href="/prompts" className="black_btn">
+            <Link
+              href="/prompts"
+              className={`${
+                pathName == "/prompts" ? "white_btn" : "black_btn"
+              } ${pathName == "/prompts" ? "active" : ""}`}
+            >
               Prompts
             </Link>
 
@@ -75,22 +86,33 @@ const Nav = () => {
                 className={`absolute top-12 right-2 z-30 w-[180px] h-auto gap-2 flex flex-col p-2 bg-gray-100/20 rounded-md ${transClass}`}
                 onMouseLeave={isDropdownOpen}
               >
-                {pathName !== "/profile" ? (
-                  <div>
-                    <Link href="/profile" className="black_btn">
-                      My Profile
-                    </Link>
-                  </div>
-                ) : (
-                  <div className="white_btn">My Profile</div>
-                )}
                 <div>
-                  <Link href="/create-prompt" className="black_btn">
+                  <Link
+                    href="/profile"
+                    className={`${
+                      pathName == "/profile" ? "white_btn" : "black_btn"
+                    } ${pathName == "/profile" ? "active" : ""}`}
+                  >
+                    My Profile
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="/create-prompt"
+                    className={`${
+                      pathName == "/create-prompt" ? "white_btn" : "black_btn"
+                    } ${pathName == "/create-prompt" ? "active" : ""}`}
+                  >
                     Create Prompt
                   </Link>
                 </div>
                 <div>
-                  <Link href="/create-post" className="black_btn">
+                  <Link
+                    href="/create-post"
+                    className={`${
+                      pathName == "/create-post" ? "white_btn" : "black_btn"
+                    } ${pathName == "/create-post" ? "active" : ""}`}
+                  >
                     Create Post
                   </Link>
                 </div>
