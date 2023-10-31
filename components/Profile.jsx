@@ -18,7 +18,6 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
               handleDelete={() => handleDelete && handleDelete(post)}
             />
           ))}
-          {data}
         </div>
       </div>
     </section>
