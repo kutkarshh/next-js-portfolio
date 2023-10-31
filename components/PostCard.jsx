@@ -31,9 +31,9 @@ const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
 
   return (
     <div className="post_card flex flex-col gap-5">
-      <div className=" flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <label
-          className="font-satoshi text-sm cursor-pointer"
+          className="font-satoshi text-sm cursor-pointer text-left"
           onClick={() => handlePostClick && handlePostClick(post.desc)}
         >
           <label className="font-bold my-10 text-xl blue_gradient cursor-pointer">
@@ -52,7 +52,7 @@ const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
         />
       </div>
       <div>
-        <div className="flex justify-between items-start gap-5">
+        <div className="flex justify-between gap-5">
           <div
             className="flex-1 flex justify-start items-center  gap-3 cursor-pointer"
             onClick={handleProfileClick}
@@ -65,7 +65,7 @@ const PostCard = ({ post, handlePostClick, handleEdit, handleDelete }) => {
               className="rounded-full object-contain"
             />
 
-            <div className="flex flex-col">
+            <div className="flex flex-col items-start">
               <h6 className="font-satoshi font-semibold text-gray-900">
                 {post.creator.username}
               </h6>

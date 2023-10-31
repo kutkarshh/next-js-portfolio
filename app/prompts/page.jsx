@@ -6,10 +6,10 @@ const Prompt = () => {
       <h1 className="head_text text-center">
         Prompts
         <br className="max-md:hidden" />
-        <span className="violet_gradient text-5xl">
-          Get instant and creative prompts here
-        </span>
       </h1>
+      <p className="pb-5 desc_text text-center violet_gradient sm:pt-5">
+        Get instant and creative prompts here
+      </p>
       <Prompts />
     </section>
   );

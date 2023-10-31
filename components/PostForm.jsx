@@ -23,21 +23,20 @@ const PostForm = ({ type, post, setPost, submitting, handleSubmit }) => {
           result.event === "success" &&
           result.info.resource_type === "image"
         ) {
-          console.log(result.info.secure_url);
-
           setPost({
             ...post,
             date: getCurrentDate(),
             image: result.info.secure_url,
           });
         }
+        if (error) console.log(error);
       }
     );
     widget.open(); // open up the widget after creation
   };
 
   return (
-    <section className="w-full max-w-full flex-start gap-1 ">
+    <section className="w-full max-w-full flex-start gap-1">
       <div className="w-2/4">
         <h1 className="head_text">
           <span className="blue_gradient">{type} Post</span>

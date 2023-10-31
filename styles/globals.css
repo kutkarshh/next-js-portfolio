@@ -99,6 +99,10 @@
   @apply text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
 }
 
+.desc_text {
+  @apply text-4xl font-extrabold leading-[1.15] text-black sm:text-5xl;
+}
+
 .orange_gradient {
   @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
 }
@@ -132,7 +136,7 @@
 }
 
 .prompt_layout {
-  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+  @apply space-y-6 sm:py-2  sm:columns-2 sm:gap-6 xl:columns-3;
 }
 
 /* Feed Component */
@@ -155,7 +159,7 @@
 
 /* Nav Component */
 .logo_text {
-  @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+  @apply font-satoshi font-semibold text-lg text-black tracking-wide;
 }
 
 .dropdown {

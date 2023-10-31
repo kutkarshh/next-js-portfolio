@@ -2,11 +2,13 @@ import "../styles/globals.css";
 
 import Nav from "../components/Nav";
 import Provider from "../components/Provider";
+import icon from "../public/assets/images/logoai.svg";
 
 export const metadata = {
   title: "Promptizer",
   description:
     "Discover & Share AI Generated Contents for free. Just login and use the free services.",
+  fav_icon: icon,
 };
 
 const RootLayout = ({ children }) => {

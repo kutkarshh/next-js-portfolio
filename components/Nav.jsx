@@ -95,11 +95,6 @@ const Nav = () => {
                   </Link>
                 </div>
                 <div>
-                  <Link href="/create-post" className="black_btn">
-                    Create Post
-                  </Link>
-                </div>
-                <div>
                   <button
                     type="button"
                     onClick={userLogOut}
