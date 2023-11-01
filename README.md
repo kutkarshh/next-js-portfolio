@@ -25,3 +25,15 @@ To build a portfolio website: Promptizer can be used to build a portfolio websit
 If you are a developer, I encourage you to check out Promptizer. It is a valuable resource that can help you in all aspects of your work.
 
 It's a project in development. Thanks for reading till the end!! 😄
+
+Work to Do:
+
+1. Post Feed not getting update
+2. On the homepage the profile dropdown is overlapping the z-index must be increased.
+3. the Post page contains upload component whose ui need to be fixed.
+4. Add a Footer
+5. On creating prompt or post it must redirect to their respective page instead of homepage.
+6. Compress image and svg cause it makes website slower
+7. remove extra code and make less unrepeatable line of code.
+8. ui text color fix on pages myProfile, create prompt
+9. Fix logout redirection point
